@@ -1,49 +1,90 @@
 body {
-  background: #ccc;
+  background: #bcbcbc;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  margin: 0;
+  font-family: "Helvetica Neue", Arial, sans-serif;
 }
 
 .ipod {
   width: 300px;
   height: 500px;
-  background: #f8f8f8;
-  border-radius: 30px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  background: #f5f5f5;
+  border-radius: 35px;
+  box-shadow: 0 0 25px rgba(0,0,0,0.3);
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
 }
 
 .screen {
   width: 85%;
   height: 45%;
-  background: black;
-  border-radius: 10px;
-  margin-top: 30px;
+  background: #000;
   color: white;
+  border-radius: 15px;
+  margin-top: 25px;
   padding: 10px;
-  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+.screen h2 {
+  text-align: center;
+  margin: 0;
+  font-size: 1.2em;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+li {
+  padding: 5px 0;
+}
+
+.selected {
+  background: #4a90e2;
+}
+
+.hidden {
+  display: none;
 }
 
 .wheel {
   position: relative;
-  margin-top: 30px;
+  margin-top: 35px;
   width: 220px;
   height: 220px;
   background: #e8e8e8;
   border-radius: 50%;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.2);
 }
 
-.center-button {
+.wheel-btn {
+  position: absolute;
+  text-align: center;
+  font-weight: bold;
+  color: #555;
+}
+
+.wheel-btn.top { top: 15px; left: 50%; transform: translateX(-50%); }
+.wheel-btn.bottom { bottom: 15px; left: 50%; transform: translateX(-50%); }
+.wheel-btn.left { left: 20px; top: 50%; transform: translateY(-50%); }
+.wheel-btn.right { right: 20px; top: 50%; transform: translateY(-50%); }
+
+.center-btn {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 80px;
-  height: 80px;
-  background: #d8d8d8;
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
+  background: #d8d8d8;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
 }
