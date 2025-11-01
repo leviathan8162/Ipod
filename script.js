@@ -6,7 +6,7 @@
 const songs = [
   { title: "Song 1", file: "songs/song1.mp3" },
   { title: "Song 2", file: "songs/song2.mp3" },
-  { title: "Song 3", file: "songs/song3.mp3" }
+  { title: "Song 3", file: "songs/Overboard - The Grey Room _ Golden Palms.mp3" }
 ];
 
 let currentSongIndex = 0;
