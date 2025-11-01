@@ -1,0 +1,49 @@
+body {
+  background: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.ipod {
+  width: 300px;
+  height: 500px;
+  background: #f8f8f8;
+  border-radius: 30px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.screen {
+  width: 85%;
+  height: 45%;
+  background: black;
+  border-radius: 10px;
+  margin-top: 30px;
+  color: white;
+  padding: 10px;
+  font-family: sans-serif;
+}
+
+.wheel {
+  position: relative;
+  margin-top: 30px;
+  width: 220px;
+  height: 220px;
+  background: #e8e8e8;
+  border-radius: 50%;
+}
+
+.center-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  background: #d8d8d8;
+  border-radius: 50%;
+}
