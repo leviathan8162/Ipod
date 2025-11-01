@@ -45,6 +45,46 @@ document.getElementById("play-btn").addEventListener("click", () => {
   }
 });
 
+const songs = [
+  { title: "Example Song 1", file: "songs/song1.mp3" },
+  { title: "Example Song 2", file: "songs/song2.mp3" },
+  { title: "Example Song 3", file: "songs/song3.mp3" }
+];
+
+let currentSongIndex = 0;
+const audio = document.getElementById("audio-player");
+const songTitle = document.getElementById("song-title");
+
+function playSong(index) {
+  const song = songs[index];
+  audio.src = song.file;
+  songTitle.textContent = song.title;
+  audio.play();
+}
+
+// when user presses ▶||
+document.getElementById("play-btn").addEventListener("click", () => {
+  if (audio.paused && audio.src) {
+    audio.play();
+  } else if (!audio.src) {
+    playSong(currentSongIndex);
+  } else {
+    audio.pause();
+  }
+});
+
+// skip forward/back
+document.getElementById("right-btn").addEventListener("click", () => {
+  currentSongIndex = (currentSongIndex + 1) % songs.length;
+  playSong(currentSongIndex);
+});
+
+document.getElementById("left-btn").addEventListener("click", () => {
+  currentSongIndex = (currentSongIndex - 1 + songs.length) % songs.length;
+  playSong(currentSongIndex);
+});
+
+
 updateSelection();
 
 // Register service worker
