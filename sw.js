@@ -1,6 +1,6 @@
 self.addEventListener('install', e => {
   e.waitUntil(
-    caches.open('ipod-cache').then(cache => {
+    caches.open('ipod-pwa').then(cache => {
       return cache.addAll([
         '/',
         '/index.html',
@@ -14,6 +14,6 @@ self.addEventListener('install', e => {
 
 self.addEventListener('fetch', e => {
   e.respondWith(
-    caches.match(e.request).then(response => response || fetch(e.request))
+    caches.match(e.request).then(res => res || fetch(e.request))
   );
 });
